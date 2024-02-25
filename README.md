@@ -1,10 +1,13 @@
 # BLE Scout - Bluetooth LE Tool
 
-BLE Scout is a cross-platform desktop application leveraging the PC integrated Bluetooth controller for accessing Bluetooth LE devices. It supports scanning for BLE advertisements, displaying the exposed advert data, connecting to devices, reading their GATT table and read/write/notify/indicate charcteristics.
+BLE Scout is a cross-platform desktop application leveraging the PC integrated Bluetooth LE controller for accessing Bluetooth LE devices. It supports scanning for BLE advertisements, displaying the exposed advert data, connecting to devices, reading their GATT table and read/write/notify/indicate charcteristics.
 
 ## Main Scan Window
 After start the main scan window opens and provides common controls for BLE device discovery.
-Start/Stop Scanning
+
+![Main Scan Window](img/ble-scout_main.png)
+
+### Start/Stop Scanning
 Pressing the [Start Scan] button starts scanning for BLE advertisments. Discovered devices will be shown as a panel list underneath. After scanning has started, the button turns into a [Stop Scan] button and BLE scanning stops when pressed again. The [Clear] button clears the panel list of discovered devices.
 
 ### Filters
@@ -12,6 +15,8 @@ Several filters can be applied to the device scanning. Entering a device name or
 
 ### Log Output
 A more detailed log output can be enabled by ticking the Show Log Output box. A second log window will open with more verbose logging information on device scanning and during connection with a device. It's possible to add time stamps to the logging as well as copy the log content to the clipboard or save the log output into a file. The file is automatically named with timestamp information.
+
+![Log Window](img/ble-scout_log.png)
 
 ### Scan Data Panel
 For each discovered device a panel with device information is shown. It contains device name, connectable status, tx power (if available), RSSI value, mac address, advertised services, service data and manufacturer specific data.
@@ -24,6 +29,8 @@ If a device is connectable you can engage a connection with the Connect button.
 ## Device Connect Window
 On connect the GATT table of the device is being read and services, corresponding characteristics and descriptors are shown in a panel structure.
 If the UUID of a service, characteristic or descriptor is in the official Bluetooth list of assigned numbers, the official name will be shown.
+
+![Device Connect Window](img/ble-scout_connect.png)
 
 Depending on the properties of each characteristic different buttons get added to the text field. Those are Read, WriteCommand, WriteRequest, Notify and Indicate. Data from/to a characteristic gets displayed or entered into a text field, which is either read/write or read only. You can switch the presentation between HEX numbers or ASCII string. When set to ASCII, non-printable characters are displayed as a black square.
 
@@ -60,10 +67,10 @@ This applies at least for Windows OS and might be different on other OS platform
 ## Libraries
 
 ### NAppGUI
-BLE-Scout uses NAppGUI (https://nappgui.com/en/home/web/home.html) as GUI toolkit and cross-platform SDK.
+BLE-Scout uses NAppGUI ([Homepage](https://nappgui.com/en/home/web/home.html), [GitHub](https://github.com/frang75/nappgui_src)) as GUI toolkit and cross-platform SDK.
 
 ### SimpleBLE
-BLE-Scout BLE Tool uses the SimpleBLE library from https://github.com/OpenBluetoothToolbox/SimpleBLE.
+BLE-Scout BLE Tool uses the [SimpleBLE cross-platform Bluetooth LE library](https://github.com/OpenBluetoothToolbox/SimpleBLE) for BLE connectivity with the native built-in Bluetooth controller.
 
 ## License
 BLE-Scout BLE Tool is released under the MIT License.
