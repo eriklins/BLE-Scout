@@ -1,0 +1,8 @@
+[16:46:24] [FAIL] Heap Global Memory Leaks!!!
+[16:46:24] ==================================
+[16:46:24] Total a/dellocations: 442, 396 (46 leaks)
+[16:46:24] Total bytes a/dellocated: 47317, 44093 (3224 bytes)
+[16:46:24] Max bytes allocated: 45251
+[16:46:24] ==================================
+[16:46:24] Config: Release
+[16:46:24] You have an execution log in: 'blescout.log'
